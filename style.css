@@ -1,0 +1,145 @@
+.contanier{
+    width: 100%;
+    min-height: 100vh;
+    background-color: aqua;
+    padding: 1px;
+    background: linear-gradient(30deg,blue,red);
+    
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    padding: 40px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 40px ;
+    background-color:white;
+    border-radius: 30px;
+}
+.todo-app h2{
+    color:#002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 50px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Ensure tasks are stacked vertically */
+    gap: 10px; /* Add spacing between tasks */
+}
+ 
+ul li {
+    display: flex; /* Use flexbox for task and buttons alignment */
+    justify-content:space-between; /* Space between task text and buttons */
+    align-items: center; /* Vertically align items */
+    /* background: #f9f9f9; */
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(78, 66, 66, 0.641);
+}
+.task-button {
+    display: flex; /* Use flexbox for buttons */
+    gap: 10px; /* Add spacing between buttons */
+    flex-direction: row; /* Align buttons horizontally */
+    align-items: center; /* Vertically align buttons */
+    padding: 0; /* Remove extra padding */
+}
+ul li::before{
+    content: "";
+    padding: 5px;
+    gap: 10px;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(To-Do-Img/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+ul li.checked .task-button button{
+    text-decoration: none;
+}
+ul li.checked::before{
+    background-image: url(To-Do-Img/images/checked.png);
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 20px
+    
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: orange;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+.list-container button{
+background-color: orange;
+padding: 10px 10px;
+}
+input::placeholder{
+    font-size: 20px;
+    color: gray;
+}
+
+.task-button button{
+    background-color: orange;
+    padding: 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .todo-app {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
