@@ -28,16 +28,15 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Ensure tasks are stacked vertically */
-    gap: 10px; /* Add spacing between tasks */
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
 }
  
 ul li {
-    display: flex; /* Use flexbox for task and buttons alignment */
-    justify-content:space-between; /* Space between task text and buttons */
-    align-items: center; /* Vertically align items */
-    /* background: #f9f9f9; */
+    display: flex; 
+    justify-content:space-between; 
+    align-items: center; 
     position: relative;
     padding: 10px;
     font-size: 20px;
@@ -46,11 +45,11 @@ ul li {
     box-shadow: 0 2px 4px rgba(78, 66, 66, 0.641);
 }
 .task-button {
-    display: flex; /* Use flexbox for buttons */
-    gap: 10px; /* Add spacing between buttons */
-    flex-direction: row; /* Align buttons horizontally */
-    align-items: center; /* Vertically align buttons */
-    padding: 0; /* Remove extra padding */
+    display: flex; 
+    gap: 10px; 
+    flex-direction: row;
+    align-items: center; 
+    padding: 0; 
 }
 ul li::before{
     content: "";
